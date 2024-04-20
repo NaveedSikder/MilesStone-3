@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  
+<body>
+  <title>Simple Animated GIF web page</title>
+</head>
+<body>
+    <h1>Location</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif" alt="funny GIF" width="100%">
+<h1>The Navigator</h1>
+<h2>The geolocation</h2>
+
+<p id="demo"></p>
+
+<script>
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition);
+} else { 
+  document.getElementById("demo").innerHTML =
+  "Geolocation is not supported by this browser.";
+}
+
+function showPosition(position) {
+  document.getElementById("demo").innerHTML =
+  "Latitude: " + position.coords.latitude + "<br>" +
+  "Longitude: " + position.coords.longitude;
+}
+</script>
+
+
+<body style="background-color:rgb(0, 255, 76);">
+</body>
+</html>
